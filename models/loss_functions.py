@@ -4,7 +4,7 @@ import tensorflow as tf
 
 sys.path.append("..")
 
-from utils.evaluation_utils import dice_coef, tversky
+from utils.eval_utils import dice_coef, tversky
 
 
 def dice_coef_loss(y_true, y_pred):
