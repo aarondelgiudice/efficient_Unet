@@ -1,4 +1,3 @@
-import csv
 import os
 import sys
 
@@ -165,13 +164,6 @@ def random_jitter(
 
 
 # loading images into data generators -----------------------------------------
-def read_csv(fp):
-    with open(fp, newline='') as f:
-        reader = csv.reader(f)
-        data = [i[0] for i in reader]
-    return data
-
-
 def load_image(filepath, shape=(512, 512, 3), dtype=None):
     image = tf.io.read_file(filepath)
     image = tf.image.decode_png(image, channels=shape[-1])
